@@ -1,27 +1,46 @@
+# class Posta
+#
+#   attr_accessor :author, :title
+#
+# @@all = []
+#
+# def initialize(title)
+#   @title = title
+#   @@all << self
+# end
+#
+# def self.all
+#   @@all
+# end
+#
+# # def title
+# # end
+#
+# # def author
+# #   self.author = @title
+# # end
+#
+# def author_name
+#   author.name if author
+# end
+#
+# end
+
 class Post
+  attr_accessor :title, :author
 
-  attr_accessor :author, :title
+  @@all = []
 
-@@all = []
+  def initialize(title)
+    @title = title
+    @@all << self
+  end
 
-def initialize(title)
-  @title = title
-  @@all << self
-end
+  def self.all
+    @@all
+  end
 
-def self.all
-  @@all
-end
-
-# def title
-# end
-
-# def author
-#   self.author = @title
-# end
-
-def author_name
-  author.name if author
-end
-
+  def author_name
+    author.name if author
+  end
 end
